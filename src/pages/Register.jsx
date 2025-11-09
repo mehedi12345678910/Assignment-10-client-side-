@@ -162,7 +162,6 @@ const Register = () => {
                 className="input input-bordered input-accent w-full"
               />
             </div>
-
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-medium text-base-content/80">
@@ -208,5 +207,4 @@ const Register = () => {
     </div>
   );
 };
-
 export default Register;
