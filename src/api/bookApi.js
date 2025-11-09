@@ -21,4 +21,3 @@ export const updateBook = async (id, bookData) => {
 export const deleteBook = async (id) => {
   return await axios.delete(`${BASE_URL}/delete-book/${id}`);
 };
-
