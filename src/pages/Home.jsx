@@ -87,7 +87,6 @@ const Home = () => {
 					</Link>
 				</div>
 			</section>
-
 			<div className="divider my-12 text-2xl font-bold text-base-content/80">BROWSE BY CATEGORY</div>
 
 			<section className="container mx-auto px-4 py-8 mb-16">
