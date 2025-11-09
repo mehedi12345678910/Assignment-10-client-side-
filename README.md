@@ -1,101 +1,78 @@
-📚 Book Haven
+# HI I am MD Mehedi Hassan
+# 📚 Book Haven: একটি আধুনিক অনলাইন লাইব্রেরি 📖
 
-A modern online library where users can browse, add, update, delete, and review books.
+<p align="center">
+  <img src="https://via.placeholder.com/800x400?text=Book+Haven+Project+Screenshot" alt="Book Haven Project Screenshot" width="100%">
+</p>
 
-✅ Project Overview
+> Book Haven হলো একটি সম্পূর্ণ **ফুল-স্ট্যাক MERN (MongoDB, Express.js, React.js, Node.js) স্ট্যাক** প্রোজেক্ট। এটি একটি আধুনিক অনলাইন লাইব্রেরি প্ল্যাটফর্ম যেখানে ব্যবহারকারীরা বই **ব্রাউজ** করতে, তাদের নিজস্ব বই **যোগ, আপডেট, ডিলিট** করতে এবং বইয়ের উপর **মন্তব্য** করতে পারবেন।
 
-Book Haven is a full-stack MERN project with Firebase Authentication. Users can securely log in, explore books, add new books, and leave comments. The system follows CRUD operations and organized code structure for both client and server.
+---
 
-🔗 Live Links
+## ✅ প্রজেক্ট ওভারভিউ
 
-Frontend Live: https://your-client-live-link.com
-Backend Live: https://your-server-live-link.com
-Client GitHub: https://github.com/your-client-repo
-Server GitHub: https://github.com/your-server-repo
+| বৈশিষ্ট্য | বিবরণ |
+| :--- | :--- |
+| **স্ট্যাক** | **MERN** (MongoDB, Express, React, Node) |
+| **অ্যাস্থেন্টিকেশন** | **Firebase** Authentication (ইমেইল/পাসওয়ার্ড) |
+| **ডাটাবেস** | MongoDB Atlas (NoSQL) |
+| **ইউআই/স্টাইলিং** | Tailwind CSS + DaisyUI |
+| **ডেভেলপার** | **Md Mehedi Hassan** |
 
-⭐ Features
-🔒 Authentication
+---
 
-Firebase Email & Password Auth
+## 🔗 লাইভ লিংক এবং সোর্স কোড
 
-Private routes (Add Book, Update Book)
+| ধরন | লিংক | 🚀 |
+| :--- | :--- | :--- |
+| **Frontend (Client)** | [https://your-client-live-link.com](https://your-client-live-link.com) | **🌐** |
+| **Backend (Server)** | [https://your-server-live-link.com](https://your-server-live-link.com) | **⚙️** |
+| **Client GitHub Repo** | [https://github.com/your-client-repo](https://github.com/your-client-repo) | **💻** |
+| **Server GitHub Repo** | [https://github.com/your-server-repo](https://github.com/your-server-repo) | **💾** |
 
-📚 Book Management (CRUD)
+---
 
-Add New Book
+## ⭐ প্রজেক্টের প্রধান ফিচারসমূহ
 
-View All Books
+### 🔒 Authentication (Firebase)
+* **Firebase Authentication** ব্যবহার করে ইমেইল ও পাসওয়ার্ড লগইন/রেজিস্ট্রেশন।
+* গুরুত্বপূর্ণ রুটগুলোতে **প্রাইভেট রুট** সুরক্ষা (`Add Book`, `My Books`, `Update Book`)।
+* লগইন থাকা অবস্থায় ইউজারের ছবি, নাম ও লগআউট বাটন প্রদর্শন।
 
-View Single Book Details
+### 📚 বই ব্যবস্থাপনা (CRUD)
+* নতুন বই যোগ করা এবং সব বই ব্রাউজ করা।
+* নির্দিষ্ট বইয়ের বিস্তারিত পেজ।
+* নিজের যোগ করা বই **আপডেট** ও **ডিলিট** করার সুবিধা।
 
-Update Book
+### 💬 মন্তব্য ব্যবস্থা
+* ইউজার বইয়ের ডিটেইল পেজে মন্তব্য করতে পারবে।
+* মন্তব্যে ইউজারের ছবি, নাম এবং সময় দেখানো হবে।
 
-Delete Book
+### 🏷️ ডিজাইন ও অতিরিক্ত সুবিধা
+* হোমপেজে সর্বশেষ **৬টি বই** এবং **Top Genres** সেকশন।
+* সুন্দর **হিরো ব্যানার** ডিজাইন।
+* সম্পূর্ণ **রেসপনসিভ UI**।
+* **লোডিং স্পিনার** এবং **এরর হ্যান্ডলিং**।
 
-💬 Comment System
+---
 
-Users can comment on each book detail page
+## 🛠️ ব্যবহৃত প্রযুক্তি
 
-Shows user photo, name, and time
+| বিভাগ | Frontend | Backend | Database & Tools |
+| :--- | :--- | :--- | :--- |
+| **প্রযুক্তি** | `React.js`, `React Router`, `Firebase Authentication`, `Axios` | `Node.js`, `Express.js` | `MongoDB (Atlas)`, `CORS`, `dotenv` |
+| **স্টাইল** | `Tailwind CSS`, `DaisyUI` | N/A | N/A |
 
-🏷️ Category & Home Page
+---
 
-Latest 6 books show on the Home page
+## 📡 API রুটসমূহ
 
-Genre-based browsing
+| মেথড | রুট | বিবরণ | অ্যাক্সেস |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/books` | লাইব্রেরির **সব বই** নিয়ে আসা। | Public |
+| `GET` | `/book/:id` | নির্দিষ্ট **বইয়ের বিস্তারিত** তথ্য নিয়ে আসা। | Public |
+| `POST` | `/add-book` | ডাটাবেসে **নতুন বই যোগ** করা। | **Private** (Auth Required) |
+| `PUT` | `/update-book/:id` | নির্দিষ্ট বইয়ের তথ্য **আপডেট** করা। | **Private** (Owner Only) |
+| `DELETE` | `/delete-book/:id` | নির্দিষ্ট বই **ডিলিট** করা। | **Private** (Owner Only) |
 
-Hero banner section
-
-Fully responsive UI
-
-✅ Additional Good Features
-
-Loading spinner
-
-Error handling
-
-Clean UI with Tailwind CSS + DaisyUI
-
-Secure MongoDB connection
-
-Axios API Layer
-
-🛠️ Technologies Used
-Frontend
-
-React.js
-
-React Router
-
-Firebase Auth
-
-Axios
-
-Tailwind CSS
-
-DaisyUI
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB (Atlas)
-
-CORS
-
-dotenv
-
-📡 API Endpoints
-Books
-
-GET /books – Get all books
-GET /book/:id – Get single book
-POST /add-book – Add new book
-PUT /update-book/:id – Update a book
-DELETE /delete-book/:id – Delete a book
-
-Comments
-
-POST /book/:id/comments – Add a comment to a book
+---
