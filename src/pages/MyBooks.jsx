@@ -11,12 +11,11 @@ const MyBooks = () => {
 	const [loading, setLoading] = useState(true);
 	const [deletingId, setDeletingId] = useState(null);
 
-	// Custom Confirmation Modal State
 	const [bookToDeleteId, setBookToDeleteId] = useState(null);
 	const [bookToDeleteTitle, setBookToDeleteTitle] = useState("");
 	const [showConfirmModal, setShowConfirmModal] = useState(false);
 	
-	// General Error State
+	//  Error State
 	const [generalError, setGeneralError] = useState(null);
 
 	const fetchMyBooks = () => {
@@ -27,16 +26,16 @@ const MyBooks = () => {
 
 		getAllBooks()
 			.then(res => {
-				// Filter books posted by the current user
+				
 				const userBooks = res.data.filter(b => b.userEmail === user.email);
 				setBooks(userBooks);
 				setLoading(false);
-				setGeneralError(null); // Clear errors on success
+				setGeneralError(null);
 			})
 			.catch(err => {
 				console.error("Error fetching user's books:", err);
 				setLoading(false);
-				// Replaced alert with state error
+			
 				setGeneralError("Failed to load your books. Please check your connection.");
 			});
 	};
@@ -45,21 +44,21 @@ const MyBooks = () => {
 		fetchMyBooks();
 	}, [user]);
 
-	// 1. Function to initiate the deletion process by showing the modal
+	
 	const handleDelete = (id, title) => {
 		setBookToDeleteId(id);
 		setBookToDeleteTitle(title);
 		setShowConfirmModal(true);
 	};
 
-	// 2. Function to cancel deletion
+	
 	const cancelDelete = () => {
 		setShowConfirmModal(false);
 		setBookToDeleteId(null);
 		setBookToDeleteTitle("");
 	};
 
-	// 3. Function to confirm and execute the API deletion
+	
 	const confirmDelete = () => {
 		if (!bookToDeleteId) return;
 		
@@ -69,12 +68,12 @@ const MyBooks = () => {
 
 		deleteBook(bookToDeleteId)
 			.then(() => {
-				// Optimistically update the UI by removing the deleted book
+			
 				setBooks(prevBooks => prevBooks.filter(b => b._id !== bookToDeleteId));
 			})
 			.catch(err => {
 				console.error("Error deleting book:", err);
-				// Replaced alert with state error
+				
 				setGeneralError("Deletion failed. Please try again.");
 			})
 			.finally(() => {
@@ -93,7 +92,7 @@ const MyBooks = () => {
 		);
 	}
 
-	// --- Display based on User/Book Status ---
+
 	
 	if (!user) {
 		return (
@@ -123,12 +122,11 @@ const MyBooks = () => {
 		);
 	}
 
-	// --- Main Content: Table Display ---
+
 
 	return (
 		<div className="container mx-auto p-4 md:p-8 bg-base-100 min-h-screen">
-			
-			{/* General Error Display */}
+	
 			{generalError && (
 				<div role="alert" className="alert alert-error mb-6 max-w-2xl mx-auto">
 					<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -136,7 +134,7 @@ const MyBooks = () => {
 				</div>
 			)}
 			
-			{/* 📚 Header Section */}
+		
 			<div className="mb-8">
 				<h2 className="text-4xl font-bold text-base-content inline-block border-b-4 border-secondary pb-1">
 					<span className="mr-2">👤</span>
@@ -147,10 +145,9 @@ const MyBooks = () => {
 				</p>
 			</div>
 
-			{/* 📊 Responsive Table */}
 			<div className="overflow-x-auto card bg-base-200 shadow-xl">
 				<table className="table table-lg w-full">
-					{/* Table Header */}
+				
 					<thead>
 						<tr className="text-base text-secondary">
 							<th>Title</th>
@@ -161,11 +158,11 @@ const MyBooks = () => {
 						</tr>
 					</thead>
 					
-					{/* Table Body */}
+				
 					<tbody>
 						{books.map(book => (
 							<tr key={book._id} className="hover:bg-base-300 transition duration-150">
-								{/* Title and Cover Image */}
+					
 								<td className="font-semibold text-base-content">
 									<div className="flex items-center space-x-3">
 										<div className="avatar">
@@ -185,13 +182,12 @@ const MyBooks = () => {
 								<td>
 									<span className="font-light">{book.author}</span>
 								</td>
-								
-								{/* Genre (Hidden on small screens) */}
+					
 								<td className="hidden sm:table-cell">
 									<div className="badge badge-outline badge-info">{book.genre}</div>
 								</td>
 								
-								{/* Rating */}
+							
 								<td>
 									<div className="flex items-center font-bold text-warning">
 										<svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 fill-current" viewBox="0 0 20 20">
@@ -200,8 +196,7 @@ const MyBooks = () => {
 										{book.rating}
 									</div>
 								</td>
-								
-								{/* Actions */}
+					
 								<td className="text-center space-x-2">
 									<button 
 										onClick={() => navigate(`/update-book/${book._id}`)} 
@@ -223,7 +218,6 @@ const MyBooks = () => {
 				</table>
 			</div>
 			
-			{/* Confirmation Modal (Hidden by default, shown by state) */}
 			{showConfirmModal && (
 				<div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" onClick={cancelDelete}>
 					<div className="card w-full max-w-md bg-base-100 shadow-xl" onClick={(e) => e.stopPropagation()}>

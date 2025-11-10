@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://the-book-haven-tau.vercel.app";
 
 export const getAllBooks = async () => {
   return await axios.get(`${BASE_URL}/books`);

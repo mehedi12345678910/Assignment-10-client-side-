@@ -19,7 +19,7 @@ const BookDetails = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5000/book/${id}`)
+      .get(`https://the-book-haven-tau.vercel.app/book/${id}`)
       .then((res) => {
         setBook(res.data);
         setLoading(false);
@@ -64,7 +64,7 @@ const BookDetails = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:5000/book/${book._id}/comments`,
+        `https://the-book-haven-tau.vercel.app/book/${book._id}/comments`,
         commentData,
         {
           headers: {
