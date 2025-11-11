@@ -25,8 +25,8 @@
 | :--- | :--- | :--- |
 | **Frontend (Client)** | https://github.com/mehedi12345678910/Assignment-10-client-side-| **🌐** |
 | **Backend (Server)** | https://github.com/mehedi12345678910/Assignment-10-server-side | **⚙️** |
-| ** LIVE LINK :** https://assignment-10-74677.web.app/my-books | **💻** |
-| **Server GitHub Repo** | [https://github.com/your-server-repo](https://github.com/your-server-repo) | **💾** |
+| ** LIVE LINK :** | https://assignment-10-74677.web.app/my-books | **💻** |
+| **backend live link** | https://the-book-haven-tau.vercel.app/ | **💾** |
 
 ---
 repository server side link : https://github.com/mehedi12345678910/Assignment-10-server-side
