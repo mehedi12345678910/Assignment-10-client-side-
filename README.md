@@ -23,12 +23,17 @@
 
 | ধরন | লিংক | 🚀 |
 | :--- | :--- | :--- |
-| **Frontend (Client)** | [https://your-client-live-link.com](https://your-client-live-link.com) | **🌐** |
-| **Backend (Server)** | [https://your-server-live-link.com](https://your-server-live-link.com) | **⚙️** |
-| **Client GitHub Repo** | [https://github.com/your-client-repo](https://github.com/your-client-repo) | **💻** |
+| **Frontend (Client)** | https://github.com/mehedi12345678910/Assignment-10-client-side-| **🌐** |
+| **Backend (Server)** | https://github.com/mehedi12345678910/Assignment-10-server-side | **⚙️** |
+| ** LIVE LINK :** https://assignment-10-74677.web.app/my-books | **💻** |
 | **Server GitHub Repo** | [https://github.com/your-server-repo](https://github.com/your-server-repo) | **💾** |
 
 ---
+repository server side link : https://github.com/mehedi12345678910/Assignment-10-server-side
+
+repository client side link : https://github.com/mehedi12345678910/Assignment-10-client-side-
+
+LIVE LINK : https://assignment-10-74677.web.app/my-books
 
 ## ⭐ প্রজেক্টের প্রধান ফিচারসমূহ
 
